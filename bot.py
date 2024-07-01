@@ -45,7 +45,7 @@ class Bot(Client):
         today = date.today()
         now = datetime.datetime.now(tz)
         timee = now.strftime("%H:%M:%S %p") 
-        app = web.AppRunner(await web_server(python bot.py))
+        app = web.AppRunner(await web_server())
         await app.setup()
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, PORT).start()
